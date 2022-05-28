@@ -13,8 +13,15 @@
         <p class="h2 display-1 text-center">Task App</p>
     </header>
     <main>
-        <div id="buttons">
-            <button class="btn btn-light" id="create-task-btn">Add Task</button>
+        <div id="tasks" class="text-center">
+            
+        </div>
+        <div id="create-task" class="text-center">
+            <form id="task-form">
+                <label for="fname"></label>
+                <input type="text" id="task-field" name="task-field" placeholder="Add Task Here"><br>
+              </form>
+            <button class="btn btn-light" id="add-task-btn">Add Task</button>
             <button class="btn btn-dark" id="delete-tasks-btn">Delete All Tasks</button>
         </div>
     </main>
