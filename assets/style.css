@@ -1,0 +1,12 @@
+header {
+    background-color: aqua;
+}
+
+.btn-light {
+    border: 3px solid grey;
+    align-items: flex;
+}
+
+.btn-dark {
+    border: 3px solid grey;
+}
