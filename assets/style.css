@@ -1,11 +1,12 @@
 header {
-    background-color: aqua;
+    color: white;
+    background-color: #b5231b;
 }
 
 #task {
   margin-top: 2%;
   margin-bottom: 2%;
-  border: 1px solid gray;
+  border: 1px solid #96a2b5;
 }
 
 #task-form {
@@ -15,7 +16,15 @@ header {
 
 #task-field {
     padding: 10px 100px;
-    border-color: grey;
+    border-color: #96a2b5;
+}
+
+ul {
+    color:#b5231b;
+    border: 2px solid #96a2b5;
+    margin: 10px 10px;
+    padding-right: 1%;
+    padding-bottom: 5px;
 }
 
 #collection {
@@ -24,6 +33,7 @@ header {
 }
 
 .btn-light {
+    background-color: #b5231b;
     border: 3px solid grey;
     align-items: flex;
     padding: 10px 20px;
