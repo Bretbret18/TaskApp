@@ -2,9 +2,10 @@ header {
     background-color: aqua;
 }
 
-#tasks {
-  margin-top: 5%;
-  margin-bottom: 5%;
+#task {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border: 1px solid gray;
 }
 
 #task-form {
@@ -15,6 +16,11 @@ header {
 #task-field {
     padding: 10px 100px;
     border-color: grey;
+}
+
+#collection {
+    margin: 20px 10px;
+    
 }
 
 .btn-light {

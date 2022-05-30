@@ -1,25 +1,36 @@
 const addTaskBtn = document.querySelector('#add-task-btn');
 const deleteTasksBtn = document.querySelector('#delete-tasks-btn');
-let tasks = document.querySelector('#tasks');
-let taskField = document.querySelector('#task-field')
+let taskInput = document.querySelector('#task');
+let taskCollection = document.querySelector('#collection');
+const taskForm = document.querySelector('#task-form')
 
-function addTask() {
-    addTaskBtn.addEventListener('click', function(e) {
-        const newTask = document.createElement('div')
-        newTask.style.border = '1px solid grey'
-        newTask.style.margin = '1%'
-        const newContent = document.createTextNode('Hi');
-        newTask.appendChild(newContent)
-        console.log(newTask);
-        tasks.appendChild(newTask)
-    })
+loadEventListeners();
+
+function loadEventListeners() {
+    taskForm.addEventListener('submit', addTask)
 }
 
-function deleteTasks() {
-    deleteTasksBtn.addEventListener('click', function(e) {
-        console.log(deleteTasksBtn);
-    })
+function addTask(e) {
+    if(taskInput.value === '') {
+        alert('Add task bar cannot be empty')
+        return null
+    }
+    console.log(taskInput.value);
+    const ul = document.createElement('ul');
+    let taskContent = document.createTextNode(taskInput.value)
+    ul.style.border = '1px solid gray';
+    ul.style.margin = '10px 10px' ;
+    ul.style.paddingRight = '55px'
+    ul.appendChild(taskContent);
+    console.log(taskContent);
+    console.log(ul);
+    taskCollection.appendChild(ul);
+    if(taskInput.value =! ''){
+        taskInput.value = '';
+    };
+
+    
+    e.preventDefault()
+    
 }
 
-addTask()
-deleteTasks()
