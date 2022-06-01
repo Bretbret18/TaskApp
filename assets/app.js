@@ -6,10 +6,13 @@ const taskForm = document.querySelector('#task-form');
 
 addTaskBtn.style.backgroundColor = '#b5231b';
 
-loadEventListeners();
+
 
 function loadEventListeners() {
     taskForm.addEventListener('submit', addTask)
+    deleteTasksBtn.addEventListener('click', deleteTasks)
+    
+    
 }
 
 function addTask(e) {
@@ -40,9 +43,18 @@ function addTask(e) {
             taskInput.value = '';
         };
 
-
+        removeIcon.addEventListener('click', function(e) {
+            removeIcon.parentElement.remove()
+        })
 
         e.preventDefault()
     }
 }
 
+function deleteTasks(e) {
+    e.preventDefault()
+
+   taskCollection.innerHTML = '';
+}
+
+loadEventListeners();
